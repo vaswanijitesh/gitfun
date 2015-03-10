@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Zinio Merge Tool</title>
+    <meta charset="utf-8">
+    <link href="style/jquery.steps.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.steps.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/branches.js"></script>
+
+</head>
+
+<body>
+    <div style="width:800px; margin:0 auto;">
+        <form id="qa-merge-form" action="#">
+            
+            <h3>Account</h3>
+            <fieldset>
+                <legend>Login to Github</legend>
+                <label for="username">User name *</label>
+                <input id="username" name="username" type="text" class="required">
+                <label for="password">Password *</label>
+                <input id="password" name="password" type="password" class="required">
+                <p>(*) Mandatory</p>
+                <div>
+                    <a href="#" name="login" id="login">Login</a>
+                </div>
+            </fieldset>
+			
+            <h3>Select Branch</h3>
+            <fieldset>
+                <legend>Branch Manipulation</legend>
+                <label for="branches">Select a branch</label>
+                <select id="branches">
+                </select>
+                <br/>
+                <label for="action">Action on branch</label>
+                <select id="action">
+                    <option value="create-branch" selected>Create QA Branch</option>
+                    <option value="create-pull">Create Pull Request Into Master</option>
+                </select>
+                <div>
+                    <a href="#" name="submit" id="submit">Submit</a>
+                </div>
+            </fieldset>
+
+            <h3>Status</h3>
+            <fieldset>
+                <legend>Status</legend>
+
+                <p id="status"></p>
+                <br/>
+                <a id="status_url"></a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
